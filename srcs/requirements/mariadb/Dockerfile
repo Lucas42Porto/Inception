@@ -8,7 +8,7 @@ COPY ./tools/init-db.sh /etc/mysql/
 COPY ./tools/init.sql /etc/mysql/init.sql
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
 
-RUN chmod +x /init-db.sh
+RUN chmod +x ./etc/mysql/init-db.sh
 
 RUN mkdir /run/mysqld
 
