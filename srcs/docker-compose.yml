@@ -21,6 +21,8 @@ services:
       - inception
     volumes:
       - wordpress:/var/www/html
+    env_file:
+      - .env
       
   nginx:
     build: ./requirements/nginx/
