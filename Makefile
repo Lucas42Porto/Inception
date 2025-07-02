@@ -7,7 +7,7 @@ NO_COLOR	=	\033[0m
 
 # ------------------------------ Message ------------------------------
 COMP_START	=	echo "\n $(BOLD_YELLOW)Make: $(NO_COLOR)Starting the compilation...\n"
-READY		=	echo "\n $(BOLD_GREEN)Ready: Application started!\n"
+READY		=	echo "\n $(BOLD_GREEN)Ready: Application started!$(NO_COLOR)\n"
 CLEANED		=	echo "\n $(BOLD_PURPLE)Clean: $(NO_COLOR)Removed all the \".o\" files \n"
 FCLEANED	=	echo "\n $(BOLD_PURPLE)Fclean: $(NO_COLOR)Full clean start! \n"
 

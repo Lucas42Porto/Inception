@@ -10,6 +10,8 @@ services:
     - inception
     volumes:
       - mariadb:/var/lib/mysql/
+    expose:
+      - "3306"
 
   wordpress:
     container_name: wordpress
@@ -23,6 +25,8 @@ services:
       - wordpress:/var/www/html
     env_file:
       - .env
+    expose:
+      - "9000"
       
   nginx:
     build: ./requirements/nginx/

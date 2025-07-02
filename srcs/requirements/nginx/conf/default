@@ -6,9 +6,9 @@ server {
     ssl_certificate /etc/nginx/ssl/nginx.crt;
     ssl_certificate_key /etc/nginx/ssl/nginx.key;
 
-    server_name lumarque.42.fr;
+    #server_name lumarque.42.fr;
+
     root /var/www/html;
-    index index.php index.html index.htm;
 
     location / {
         autoindex on;
@@ -21,3 +21,5 @@ server {
     }
 
 }
+
+
