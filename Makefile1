@@ -23,10 +23,10 @@ all: up
 
 up:
 	@$(COMP_START)
-	@sudo mkdir -p $(DATA_DIR)/html $(DATA_DIR)/mysql
-	@sudo chmod 777 $(DATA_DIR)/html $(DATA_DIR)/mysql
-	@sudo chmod 777 /etc/hosts	
-	@sudo echo "127.0.0.1 lumarque.42.fr" >> /etc/hosts
+	@mkdir -p $(DATA_DIR)/html $(DATA_DIR)/mysql
+	#@sudo chmod 777 $(DATA_DIR)/html $(DATA_DIR)/mysql
+	#@sudo chmod 777 /etc/hosts	
+	#@sudo echo "127.0.0.1 lumarque.42.fr" >> /etc/hosts
 	@$(DOCKER_COMPOSE) $(COMPOSE_DIRECTORY) up -d --build
 	@$(READY)
 
@@ -48,7 +48,7 @@ clean:
 	@$(CLEANED)
 	@$(DOCKER_COMPOSE) $(COMPOSE_DIRECTORY) down
 	@$(DOCKER) image rm -f $$(docker image ls -q) 2>>app.log || true
-	@sudo rm -fr $(DATA_DIR)
+	@rm -fr $(DATA_DIR)
 	@echo "\t\t      \033[1;33mCleanup complete.\033[0m"
 
 fclean:
